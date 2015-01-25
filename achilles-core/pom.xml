@@ -120,6 +120,18 @@
             <artifactId>hibernate-validator</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <compilerArgument>-proc:none</compilerArgument>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
